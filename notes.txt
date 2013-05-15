@@ -1,4 +1,8 @@
-<div ng-repeat "list in lists"> this is how the dynamic lists should be created.
+Todos
+- Add sortable columns to layout
+- Fix CRUD functions to add new todos correctly
+- Note down GIT key commands
+
 
 
 List of angular tricks 
