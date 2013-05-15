@@ -1,0 +1,28 @@
+<div ng-repeat "list in lists"> this is how the dynamic lists should be created.
+
+
+List of angular tricks 
+https://github.com/angular/angular.js/wiki/JsFiddle-Examples
+
+This is a good jquery UI library:
+http://jqueryui.com/draggable/#sortable
+
+Also interesting dragging of thumbnails: 
+http://jsfiddle.net/simpulton/VJ94U/
+
+Jquery UI dragging in Angular: 
+http://jsfiddle.net/IgorMinar/NyJcd/11/
+
+
+
+$scope.todos = [
+  {text:'learn angular', done:true},
+  {text:'build an angular app', done:false}];
+
+	$scope.lists = [
+	        {ListId : 7, ListName : 'To read later' },       
+	        {ListId : 8, ListName : 'Misc Work' },
+	        {ListId : 9, ListName : 'Private stuff' } ];
+
+
+

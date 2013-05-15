@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app>
+  <head>
+	<!--Ebook about AngularJS to get: http://uploaded.net/file/1vnth3p3-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+    <script src="application.js"></script>
+    <link rel="stylesheet" href="application.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen">
+    <title>Sune's AngularLists'</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  </head>
+  <body>
+	<h2>AngularLists</h2>
+	<div ng-controller="TodoCtrl">
+	<div class="container-fluid">
+	  <div class="row-fluid">
+	    <div class="span12">
+	      <!--Body content-->
+	 
+	     <form ng-submit="addTodo()">
+	        <input type="text" ng-model="todoText"  size="30" placeholder="add new list item here" autofocus="autofocus">
+			<select ng-model="selectList" ng-options="item.list_name for item in lists" placeholder="add to list"></select>		
+	        <input class="btn-primary" type="submit" value="add">
+	      </form>
+
+		<h3>test </h3>
+	      <ul class="unstyled">
+	        <li ng-repeat="item in lists">{{item.list_name}}
+	      		<ul class="unstyled">
+	        		<li ng-repeat="child in item.todos">{{child.todo_name}}
+	        		</li>
+	      		</ul>
+			</li>
+	      </ul>
+
+	    </div>
+	</div>
+	  </div>
+	<pre ng-bind="lists | json "></pre>
+	</div>
+  </body>
+</html>
